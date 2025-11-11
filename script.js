@@ -59,3 +59,18 @@ document.getElementById("contactForm").addEventListener("submit", e => {
   e.preventDefault();
   alert("Message sent! (demo)");
 });
+
+function doPost(e) {
+  var data = JSON.parse(e.postData.contents);
+
+  var emailTo = "yungpanther6@gmail.com"; 
+  var subject = "New Website Contact Message";
+  var message = 
+    "Name: " + data.name + "\n" +
+    "Email: " + data.email + "\n" +
+    "Message:\n" + data.message;
+
+  MailApp.sendEmail(emailTo, subject, message);
+  
+  return ContentService.createTextOutput("sent");
+}
