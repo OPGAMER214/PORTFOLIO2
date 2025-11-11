@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ================= Header ================= -->
+  <header class="header">
+    <nav>
+      <div class="logo">Portfolio</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="header-buttons">
+        <button id="themeToggle" class="theme-toggle">🌓</button>
+        <button id="menuBtn" class="menu-btn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= Hero ================= -->
+  <section id="home" class="hero section">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Your Name</span></h1>
+      <p>Frontend Developer | UI/UX Enthusiast | Problem Solver</p>
+      <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
+      <div class="hero-pic">
+        <img src="your-photo.jpg" alt="Your Photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Other sections unchanged -->
+  <section id="about" class="about section">
+    <h2>About Me</h2>
+    <p>I am a passionate developer who loves building interactive web applications.</p>
+  </section>
+
+  <section id="projects" class="projects section">
+    <h2>Projects</h2>
+    <div id="projectList" class="project-grid"></div>
+  </section>
+
+  <section id="skills" class="skills section">
+    <h2>Skills</h2>
+    <div id="skillsList" class="skills-grid"></div>
+  </section>
+
+  <section id="contact" class="contact section">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer class="footer">© 2025 Your Name</footer>
+
+  
+</body>
+<script src="script.js"></script>
+</html>
